@@ -1,5 +1,20 @@
 apiVersion: backstage.io/v1alpha1
-kind: Location
+kind: Component
 metadata:
-  name: example-components
-  description: A collection of all Backstage example components
+  name: sample-component
+  description: A sample component for demonstration purposes
+  tags:
+    - sample
+spec:
+  type: service
+  lifecycle: experimental
+  owner: 
+    name: John Doe
+    email: johndoe@example.com
+  providesApis:
+    - system: sample-system
+  implementsApis:
+    - system: sample-system
+  links:
+    - url: https://github.com/example/sample-component
+      title: Repository
