@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: CatalogInfo
+metadata:
+  name: backstage
+spec:
+  title: My Backstage Catalog
+  description: This is a sample catalog for managing services and developer experience.
+  owner: Your Name
+  baseUrl: https://your-backstage-app-url.com
+  theme: light
+  logoUrl: https://example.com/logo.png
+  twitter: backstage_io
+  slack: backstage-users
+  breadcrumbs: true
+  docs:
+    description: Learn more about Backstage
+    href: https://backstage.io/docs
+  insight:
+    title: Dashboard
+    description: Get insights into your services and teams
+    href: https://your-analytics-dashboard.com
+  notifications:
+    slack:
+      channel: backstage-notifications
+    email:
+      recipients:
+        - team@example.com
+      subject: Backstage Notifications
