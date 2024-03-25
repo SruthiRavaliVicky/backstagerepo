@@ -1,20 +1,22 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: sample-component
-  description: A sample component for demonstration purposes
+  name: artist-web
+  description: The place to be, for great artists
+  labels:
+    example.com/custom: custom_label_value
+  annotations:
+    example.com/service-discovery: artistweb
+    circleci.com/project-slug: github/example-org/artist-website
   tags:
-    - sample
-spec:
-  type: service
-  lifecycle: experimental
-  owner: 
-    name: John Doe
-    email: johndoe@example.com
-  providesApis:
-    - system: sample-system
-  implementsApis:
-    - system: sample-system
+    - java
   links:
-    - url: https://github.com/example/sample-component
-      title: Repository
+    - url: https://admin.example-org.com
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
+spec:
+  type: website
+  lifecycle: production
+  owner: artist-relations-team
+  system: public-websites
